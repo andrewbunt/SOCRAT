@@ -18,10 +18,12 @@ module.exports = class ChartsList extends BaseService
       x: ['integer', 'number', 'string']
       y: ['integer', 'number', 'string']
       z: ['integer', 'string']
+      h: true
       message: "Use option x to choose a numerical or categorical variable, or choose one categorical variable and one numerical variable."
       xLabel: "X"
       yLabel: "Y"
       zLabel: "Color"
+      hLabel: "Toggle horizontal"
     ,
       name: 'Scatter Plot'
       value: 2
@@ -134,6 +136,34 @@ module.exports = class ChartsList extends BaseService
       xLabel: "X (date)"
       yLabel: "Y"
       zLabel: "Key"
+    ,
+      name: 'Binned Heatmap'
+      value: 12
+      v: false
+      w: false
+      x: ['integer', 'number', 'string']
+      y: ['integer', 'number', 'string']
+      z: ['integer', 'string']
+      xbin: ['integer']
+      ybin: ['integer']
+      message: "Choose x, y, and z variables, along with max bin values."
+      xLabel: "X"
+      yLabel: "Y"
+      zLabel: "Z"
+      xbinLabel: "X Bin"
+      ybinLabel: "Y Bin"
+    ,
+      name: 'Strip Plot'
+      value: 13
+      v: false
+      w: false
+      x: ['integer', 'number']
+      y: ['integer', 'number']
+      z: false
+      message: "Choose x and y variables."
+      xLabel: "X"
+      yLabel: "Y"
+
     ]
 
   getNested: () ->
